@@ -1,0 +1,9 @@
+Project by: Samuel Jungert
+Completed on: 4-20-2016
+
+Contained in this directory: 
+BFSGraph.h, DFSGraph.h --- Files given
+BFSGraph.cpp, DFSGraph.cpp, main.cpp --- Implementation of respective graph search method
+
+Functional Description (What does it do?):
+The code performs a Depth First Search (DFS), and Breadth First Search (BFS), on a given input graph. 

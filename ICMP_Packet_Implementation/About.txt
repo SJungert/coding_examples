@@ -1,0 +1,10 @@
+Project by: Samuel Jungert
+Completed on: 11-20-2017
+
+Contained in this directory: 
+Network_packet.cpp --- Code for ICMP, ARP implementation.
+
+Functional Description (What does it do?):
+Uses multiple threads to listen for and send ARP and ICMP packets.
+A ICMP (Internet Control Message Protocol) packet is a type of IP packet.
+

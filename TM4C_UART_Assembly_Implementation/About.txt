@@ -1,0 +1,6 @@
+Project by: Samuel Jungert +
+Completed on: 10-20-2016
+
+Contained in this directory: 
+main.s --- Assembly code to enable UART on the TM4C microcontroller.
+ 

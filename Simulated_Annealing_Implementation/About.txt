@@ -1,0 +1,13 @@
+Project by: Samuel Jungert
+Completed on: 10-25-2017
+
+Contained in this directory: 
+input.txt --- Contains area and aspect ratio for each Non Polish Expression (NPE)
+Simulated_Annealing.h, Simulated_Annealing.cpp, and Main.cpp --- Contains varius functions
+to calculate the minimum weight (minimum area) of a valid NPE. 
+simulatedAnnealing.jpg --- Resultant NPE and area.
+
+Functional Description (What does it do?):
+Using simmulated annealing algorithm, the lowest cost (smallest area) NPE is calculated.
+VLSI design and is an approach to floorplanning.
+
