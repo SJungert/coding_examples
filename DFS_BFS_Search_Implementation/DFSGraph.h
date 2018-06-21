@@ -13,6 +13,7 @@ public:
 	int n; // the number of vertices, the ids of the vertices are from 0 to n-1
 	Vertex ** adj; // adj[i] points the head of the adjacency list of vertex i
 	DFSGraph(int n_input); // constructor
+	~DFSGraph(); //Destructor
 	void setAdjLists(int * adjM); // build the adjacency lists from the adjacency matrix adjM
 	void printAdjLists(); // print the adjacency lists of the graph
 						  // the following two functions are for the DFS traversal as we discussed in class

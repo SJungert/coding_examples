@@ -36,8 +36,6 @@ int main() {
 	Graph2.DFS();
 	Graph2.PrintReachableNodes(0);
 	
-
-
 	/*
 	for (int i = 0; i < size1; i++) {
 		std::cout << "Row " << i << ":" << std::endl;

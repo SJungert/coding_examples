@@ -18,6 +18,15 @@ DFSGraph::DFSGraph(int n_input) { // constructor
 	}
 };
 
+DFSGraph::~DFSGraph(){
+	delete[] color;
+	color = 0;
+	delete[] pre;
+	pre = 0;
+	delete[] adj;
+	adj = 0; 
+};
+
 void DFSGraph::setAdjLists(int * adjM) {
 	for (int i = 0; i < n; i++) {
 		for (int j = n - 1; j >= 0; j--) {
@@ -26,6 +35,8 @@ void DFSGraph::setAdjLists(int * adjM) {
 				Vertex *v = new Vertex(j);
 				v->next = adj[i];
 				adj[i] = v;
+				delete v;
+				v = 0;
 			}
 		}
 	}
@@ -86,6 +97,8 @@ void DFSGraph::PrintReachableNodes(int source) {
 	}
 	RPrintReachableNodes(adj[source], tempColor);
 	std::cout << std::endl;
+	delete[] tempColor;
+	tempColor = 0;
 };// Print all nodes that can be reached by source
 
 void DFSGraph::RPrintReachableNodes(Vertex* v, colorType *& tempColor) {

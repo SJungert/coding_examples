@@ -20,6 +20,17 @@ BFSGraph::BFSGraph(int n_input) { // constructor
 	}
 };
 
+BFSGraph::~BFSGraph(){ // destructor
+	delete[] color;
+	color = 0;
+	delete[] pre;
+	pre = 0;
+	delete[] dis;
+	dis = 0;
+	delete[] adj;
+	adj  = 0;
+};
+
 void BFSGraph::SetAdjLists(int * adjM) { // build the adjacency lists from the adjacency matrix adjM
 	for (int i = 0; i < n; i++) {
 		for (int j = n - 1; j >= 0; j--) {
@@ -28,6 +39,8 @@ void BFSGraph::SetAdjLists(int * adjM) { // build the adjacency lists from the a
 				Vertex *v = new Vertex(j);
 				v->next = adj[i];
 				adj[i] = v;
+				delete v; // Free allocated memory
+				v = 0;
 			}
 		}
 	}
@@ -68,7 +81,7 @@ void BFSGraph::BFSVisit(int id) { // actually does BFS, search a connected compo
 	int frontIndex = 0;
 	int rearIndex = 0;
 	//Queue
-		int * queue = new int[n+1];
+		int * queue = new int[n+1]; // Allocated New Memory
 		for (int i = 0; i < n+1; i++) {
 			queue[i] = -1;
 		}
@@ -96,6 +109,9 @@ void BFSGraph::BFSVisit(int id) { // actually does BFS, search a connected compo
 		front = &queue[frontIndex++];
 	}
 	std::cout << std::endl;
+	//deallocate memory for queue
+	delete[] queue;
+	queue = 0;
 };
 
 void BFSGraph::PrintSP(int source, int v) { // Print the shortest path from the source to v and the

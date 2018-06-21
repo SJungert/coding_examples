@@ -27,6 +27,7 @@ public:
 	int n; // the number of vertices, the ids of the vertices are from 0 to n-1
 	Vertex ** adj; // adj[i] points the head of the adjacency list of vertex i, for i from 0 to n-1
 	BFSGraph(int n_input); // constructor
+	~BFSGraph(); // destructor
 	void SetAdjLists(int * adjM); // build the adjacency lists from the adjacency matrix adjM
 	void PrintAdjLists(); // print the adjacency lists of the graph
 						  // the following two functions are for the BFS traversal as we discussed in class
