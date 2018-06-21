@@ -1,5 +1,6 @@
 //Samuel Jungert
 //A01241879
+// Ubuntu Test
 #include "BFSGraph.h"
 
 BFSGraph::BFSGraph(int n_input) { // constructor
